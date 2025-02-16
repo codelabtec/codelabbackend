@@ -10,7 +10,7 @@ export default async function handler(req, res) {
   const { BREVO_API_KEY, BREVO_LIST_ID } = process.env;
 
   if (!email) {
-    return res.status(400).json({ message: 'Email é obrigatório' });
+    return res.status(400).json({ message: 'O Email é obrigatório' });
   }
 
   try {
