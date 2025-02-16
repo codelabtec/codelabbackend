@@ -6,11 +6,7 @@ const axios = require('axios');
 
 const app = express();
 
-app.use(cors({
-    origin: process.env.CORS_ORIGIN,
-    methods: ['GET', 'POST', 'PUT', 'DELETE'],
-    credentials: true
-})); // Permite requisições de outras origens (como o front local)
+app.use(cors()); // Permite requisições de outras origens (como o front local)
 
 app.use(express.json()); // Para conseguir ler o body em JSON
 
